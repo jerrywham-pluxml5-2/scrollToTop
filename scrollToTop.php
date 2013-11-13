@@ -93,7 +93,7 @@ $(\'#scrollToTop a\').live(\'click\', function(event){
 	{
 		echo "\t".'<script type="text/javascript">
 				/* <![CDATA[ */
-				if(typeof(jQuery) === "undefined") document.write(\'<script  type="text/javascript" src="'.PLX_PLUGINS.'scrollToTop/jquery-1.7.1.min.js"><\/script>\');
+				!window.jQuery && document.write(\'<script  type="text/javascript" src="'.PLX_PLUGINS.'scrollToTop/jQuery-v1.10.2.js"><\/script>\');
 				/* !]]> */
 			</script>'."\n";
 		echo "\t".'<script type="text/javascript" src="'.PLX_PLUGINS.'scrollToTop/scrolltotop.js"></script>'."\n";

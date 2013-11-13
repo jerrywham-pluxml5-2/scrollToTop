@@ -5,13 +5,13 @@ jQuery(function($){
 	} else {
 		if($('#scrollToTop').length == 0){
 			$('body').append('<div id="scrollToTop">'+
-			'<a href="#">\u25B2</a>'+
+			'<a href="#">\u21E7</a>'+
 			'</div>');
 		}
 		$('#scrollToTop').fadeIn("fast");
 	}
 });
-$('#scrollToTop a').live('click', function(event){
+$('#scrollToTop a').on('click', function(event){
 		event.preventDefault();
 		$('html,body').animate({scrollTop: 0}, 'slow');
 	})
