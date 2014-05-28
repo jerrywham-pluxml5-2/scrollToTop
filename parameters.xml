@@ -1,6 +1,0 @@
-<?xml version='1.0' encoding='UTF-8'?>
-<document>
-	<parameter name="color" type="cdata"><![CDATA[#A1A1A1]]></parameter>
-	<parameter name="linkToTop" type="cdata"><![CDATA[\u21E7]]></parameter>
-	<parameter name="colorTextToTop" type="cdata"><![CDATA[]]></parameter>
-</document>

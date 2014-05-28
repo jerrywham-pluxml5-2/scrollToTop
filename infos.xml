@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document>
 	<title><![CDATA[scrollToTop]]></title>
-	<author><![CDATA[Patrice Blondel, Cyril MAGUIRE]]></author>
-	<version>1.3</version>
-	<date>13/11/2013</date>
+	<author><![CDATA[Cyril MAGUIRE]]></author>
+	<version>2.0</version>
+	<date>29/05/2014</date>
 	<site>http://www.ecyseo.com/</site>
 	<description><![CDATA[Permet d'afficher un lien vers le haut de page qui s'affiche dynamiquement que lorsqu'on est descendu en bas de page]]></description>
 	<requirements></requirements>

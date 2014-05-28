@@ -1,13 +1,13 @@
 /** Bouton haut de page **/
-#scrollToTop {font-size: 0.9em;}
-#scrollToTop a, 
-#scrollToTop a:visited, 
-#scrollToTop a:link, 
-#scrollToTop a:hover, 
-#scrollToTop a:focus, 
-#scrollToTop a:active {
+#toplink {font-size: 0.9em;}
+#toplink a, 
+#toplink a:visited, 
+#toplink a:link, 
+#toplink a:hover, 
+#toplink a:focus, 
+#toplink a:active {
     display:block;
-    color: #A1A1A1;
+    color: #0082B0;
     position: fixed;
     right: 10px;
     bottom: 16px;
