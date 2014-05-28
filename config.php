@@ -2,9 +2,9 @@
 /**
  * Classe scrollToTop
  *
- * @version 1.2
- * @date	20/01/2013
- * @author	Patrice Blondel, Cyril MAGUIRE
+ * @version 2.0
+ * @date	29/05/2014
+ * @author	Cyril MAGUIRE
  **/
  
 	if(!defined('PLX_ROOT')) exit; 
