@@ -15,6 +15,12 @@
 
     var timeOut;
     var isIE = isIE();
+    var bodyTag = document.getElementsByTagName('body');
+    var idOfBody = bodyTag[0].getAttribute('id');
+    if (idOfBody == null) {
+        idOfBody = 'top';
+        bodyTag[0].setAttribute('id', 'top');
+    }
 
     function isIE() {
         var nav = navigator.userAgent.toLowerCase();
@@ -71,11 +77,11 @@
         var topLink = document.getElementById('toplink');
         if (pos[1] > 150) {
             if (topLink == null) {
-                addElement('top','toplink','<a href="#" onclick="backToTop();return false;">'+fleche+'</a>');
+                addElement(idOfBody,'toplink','<a href="#" onclick="backToTop();return false;">'+fleche+'</a>');
             }
         } else {
             if (topLink != null) {
-                Remove('top','toplink');
+                Remove(idOfBody,'toplink');
             }
         }
     }
@@ -86,4 +92,5 @@
     window.backToTop = backToTop;
 
 
-})(window);
+})(window);  
+    
