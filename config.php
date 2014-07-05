@@ -32,7 +32,8 @@
 	
 	if(!empty($_POST)) {
 		if (!empty($_POST['color']) ) {
-			$plxPlugin->setParam('color', $_POST['color'], 'cdata');
+            $plxPlugin->setParam('color', $_POST['color'], 'cdata');
+			$plxPlugin->setParam('speed', ($_POST['speed'] <= 0 ? 40 : $_POST['speed']), 'numeric');
 			if (!empty($_POST['textToTop']) && !empty($_POST['colorTextToTop'])) {
 				$plxPlugin->setParam('colorTextToTop', $_POST['colorTextToTop'], 'cdata');
 			}
@@ -180,7 +181,17 @@
 
 })(window);  
     ';
-			plxUtils::write($js, PLX_PLUGINS.'scrollToTop/scrolltotop.js');
+
+      $encoding = 10;
+      $fast_decode = true;
+      $special_char = false;
+      $css = false;
+      
+      require 'class.JavaScriptPacker.php';
+      $packer = new JavaScriptPacker($js, $encoding, $fast_decode, $special_char);
+      $packed = $packer->pack();
+
+			plxUtils::write($packed, PLX_PLUGINS.'scrollToTop/min.scrolltotop.js');
 		}
 		header('Location: parametres_plugin.php?p=scrollToTop');
 		exit;
@@ -205,7 +216,9 @@
 		<p><?php echo $plxPlugin->getLang('L_CONFIG_FREE_TXT') ?></p>
 		<?php plxUtils::printInput('textToTop', (array_key_exists($plxPlugin->getParam('linkToTop'), $aLinkToTop) ? '' : $plxPlugin->getParam('linkToTop') ), 'text'); ?><a class="help" title="<?php echo $plxPlugin->getLang('L_HELP_FREE_TXT'); ?>">&nbsp;</a>
 		<p><?php echo $plxPlugin->getLang('L_CONFIG_COLOR_FREE_TXT') ?> #B2B2B2</p>
-		<?php plxUtils::printInput('colorTextToTop', (array_key_exists($plxPlugin->getParam('linkToTop'), $aLinkToTop) ? '' : $plxPlugin->getParam('colorTextToTop') ), 'text'); ?>
+        <?php plxUtils::printInput('colorTextToTop', (array_key_exists($plxPlugin->getParam('linkToTop'), $aLinkToTop) ? '' : $plxPlugin->getParam('colorTextToTop') ), 'text'); ?>
+        <p><?php echo $plxPlugin->getLang('L_CONFIG_SPEED') ?></p>
+		<?php plxUtils::printInput('speed', $plxPlugin->getParam('speed'), 'numeric'); ?>
 
 	</fieldset>
 	<br />
