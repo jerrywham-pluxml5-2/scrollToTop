@@ -2,9 +2,9 @@
 <document>
 	<title><![CDATA[scrollToTop]]></title>
 	<author><![CDATA[Cyril MAGUIRE]]></author>
-	<version>2.0</version>
-	<date>29/05/2014</date>
-	<site>http://www.ecyseo.com/</site>
+	<version>2.1</version>
+	<date>05/07/2014</date>
+	<site>http://www.ecyseo.net/</site>
 	<description><![CDATA[Permet d'afficher un lien vers le haut de page qui s'affiche dynamiquement que lorsqu'on est descendu en bas de page]]></description>
 	<requirements></requirements>
 </document>

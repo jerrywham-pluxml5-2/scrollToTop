@@ -2,8 +2,8 @@
 /**
  * Classe scrollToTop
  *
- * @version 2.0
- * @date	29/05/2014
+ * @version 2.1
+ * @date	05/07/2014
  * @author	Cyril MAGUIRE
  **/
  
