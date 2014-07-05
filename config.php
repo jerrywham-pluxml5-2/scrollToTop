@@ -88,9 +88,7 @@
             $licence = '/*
 # ------------------ BEGIN LICENSE BLOCK ------------------
 #
-# This file is part of SIGesTH
-#
-# Copyright (c) 2009 - 2014 Cyril MAGUIRE, (!Pragmagiciels)
+# Copyright (c) 2009 - 2014 Cyril MAGUIRE
 # Licensed under the CeCILL v2.1 license.
 # See http://www.cecill.info/licences.fr.html
 #
