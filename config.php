@@ -85,7 +85,7 @@
 		if ( !empty($_POST['linkToTop']) && ( (array_key_exists($_POST['linkToTop'], $aLinkToTop) && empty($_POST['textToTop']) ) || !empty($_POST['textToTop']) ) ) {
 			$plxPlugin->setParam('linkToTop', $_POST['linkToTop'], 'cdata');
 			$plxPlugin->saveParams();
-			$js = '/*
+            $licence = '/*
 # ------------------ BEGIN LICENSE BLOCK ------------------
 #
 # This file is part of SIGesTH
@@ -95,7 +95,8 @@
 # See http://www.cecill.info/licences.fr.html
 #
 # ------------------- END LICENSE BLOCK -------------------
-*/
+*/';
+			$js = '
 ;(function(window,undefined) {
 
     \'use_strict\';
@@ -191,7 +192,7 @@
       $packer = new JavaScriptPacker($js, $encoding, $fast_decode, $special_char);
       $packed = $packer->pack();
 
-			plxUtils::write($packed, PLX_PLUGINS.'scrollToTop/min.scrolltotop.js');
+			plxUtils::write($licence.$packed, PLX_PLUGINS.'scrollToTop/min.scrolltotop.js');
 		}
 		header('Location: parametres_plugin.php?p=scrollToTop');
 		exit;
